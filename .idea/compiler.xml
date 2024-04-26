@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Updater" />
+        <module name="SpotifyXP" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SpotifyXP" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
