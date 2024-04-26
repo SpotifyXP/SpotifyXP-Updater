@@ -1,0 +1,13 @@
+{
+  "updater.menubar.title": "Auf Aktualisierung prüfen",
+  "updater.availableui.progresslabel": "Aktualisierung verfügbar! Klicke 'Aktualisierung starten' um zu aktualisieren",
+  "updater.availableui.updateButton": "Aktualisierung starten",
+  "updater.availableui.cancelButton": "Aktualisierung abbrechen",
+  "updater.availableui.failed": "Aktualisierung fehlgeschlagen! %s",
+  "updater.availableui.cancelButtonDone": "Schließen",
+  "updater.availableui.title": "SpotifyXP - Aktualisierer",
+  "updater.availableui.updating": "Aktualisiere",
+  "updater.availableui.done": "Fertig",
+  "updater.confirmation.title": "Warnung",
+  "updater.confirmation.message": "Beim anklicken von Ok SpotifyXP wird sich schließen und denn Aktualisierer öffnen",
+}

@@ -8,6 +8,8 @@ import com.spotifyxp.utils.ApplicationUtils;
 import com.spotifyxp.utils.GraphicalMessage;
 import org.json.JSONObject;
 
+import javax.swing.*;
+
 public class Updater {
     public static boolean disable = false;
 
@@ -92,10 +94,14 @@ public class Updater {
         if(disable) {
             return;
         }
+        if(GraphicalMessage.showConfirmDialog(UpdaterValues.language.translate("updater.confirmation.title"), UpdaterValues.language.translate("updater.confirmation.message"), JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE) == JOptionPane.CANCEL_OPTION) {
+            return;
+        }
         if(!System.getProperty("os.name").toLowerCase().contains("win")) {
             try {
-                ProcessBuilder builder = new ProcessBuilder("bash", "-c", "java", "-jar", PublicValues.appLocation + "/SpotifyXP-Updater.jar", ApplicationUtils.getVersion(), "\"" + PublicValues.appLocation + "\"");
+                ProcessBuilder builder = new ProcessBuilder("bash", "-c", "java", "-jar", PublicValues.appLocation + "/Extensions/SpotifyXP-Updater.jar", "\"" + PublicValues.appLocation + "\"", new Updater().updateAvailable().url);
                 builder.start();
+                System.exit(0);
             }catch (Exception e) {
                 ConsoleLogging.Throwable(e);
                 GraphicalMessage.openException(e);
@@ -103,8 +109,9 @@ public class Updater {
             return;
         }
         try {
-            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "java", "-jar", PublicValues.appLocation + "/SpotifyXP-Updater.jar", ApplicationUtils.getVersion(), "\"" + PublicValues.appLocation + "\"");
+            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "java", "-jar", PublicValues.appLocation + "/Extensions/SpotifyXP-Updater.jar", "\"" + PublicValues.appLocation + "\"", new Updater().updateAvailable().url);
             builder.start();
+            System.exit(0);
         }catch (Exception e) {
             ConsoleLogging.Throwable(e);
             GraphicalMessage.openException(e);

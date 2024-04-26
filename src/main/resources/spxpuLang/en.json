@@ -1,0 +1,13 @@
+{
+  "updater.menubar.title": "Check for update",
+  "updater.availableui.progresslabel": "Update available! Click 'Start update' to update",
+  "updater.availableui.updateButton": "Start update",
+  "updater.availableui.cancelButton": "Cancel update",
+  "updater.availableui.failed": "Update failed! %s",
+  "updater.availableui.cancelButtonDone": "Close",
+  "updater.availableui.updating": "Updating",
+  "updater.availableui.done": "Done",
+  "updater.availableui.title": "SpotifyXP - Updater",
+  "updater.confirmation.title": "Warning",
+  "updater.confirmation.message": "On clicking ok SpotifyXP will close and start the updater"
+}

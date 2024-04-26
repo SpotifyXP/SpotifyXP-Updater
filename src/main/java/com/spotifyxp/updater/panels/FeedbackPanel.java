@@ -25,15 +25,12 @@ public class FeedbackPanel {
         feedbackupdaterversionfield.setForeground(PublicValues.globalFontColor);
         feedbackupdatespanel.add(feedbackupdaterversionfield);
         feedbackupdaterversionfield.setColumns(10);
-        feedbackwillbemovedlabel = new JLabel("The Updater will be moved to an other place");
-        feedbackwillbemovedlabel.setBounds(10, 29, 327, 14);
-        feedbackupdatespanel.add(feedbackwillbemovedlabel);
         feedbackwillbemovedlabel.setForeground(PublicValues.globalFontColor);
         feedbackupdaterdownloadbutton = new JButton(PublicValues.language.translate("ui.updater.downloadnewest"));
         feedbackupdaterdownloadbutton.setBounds(10, 149, 230, 23);
         feedbackupdatespanel.add(feedbackupdaterdownloadbutton);
         feedbackupdaterdownloadbutton.setForeground(PublicValues.globalFontColor);
         feedbackupdaterversionfield.setEditable(false);
-        feedbackupdaterdownloadbutton.addActionListener(e -> ConnectionUtils.openBrowser(new Updater().updateAvailable().url));
+        feedbackupdaterdownloadbutton.addActionListener(e -> new Updater().invoke());
     }
 }
