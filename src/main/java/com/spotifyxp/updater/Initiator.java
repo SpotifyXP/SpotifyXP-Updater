@@ -44,6 +44,9 @@ public class Initiator implements InjectorInterface {
         Events.subscribe(SpotifyXPEvents.onFrameReady.getName(), new Runnable() {
             @Override
             public void run() {
+                UpdaterValues.language = new libLanguage();
+                UpdaterValues.language.setLanguageFolder("spxpuLang");
+                UpdaterValues.language.setNoAutoFindLanguage(PublicValues.config.getString(ConfigValues.language.name));
                 JMenuBar bar = ContentPanel.bar;
                 JMenu file = bar.getMenu(0);
                 JMenuItem checkUpdate = new JMenuItem(UpdaterValues.language.translate("updater.menubar.title"));
