@@ -11,7 +11,6 @@ import javax.swing.border.TitledBorder;
 public class FeedbackPanel {
     public static JButton feedbackupdaterdownloadbutton;
     public static JPanel feedbackupdatespanel;
-    public static JLabel feedbackwillbemovedlabel;
     public static JTextField feedbackupdaterversionfield;
 
     public FeedbackPanel() {
@@ -25,7 +24,6 @@ public class FeedbackPanel {
         feedbackupdaterversionfield.setForeground(PublicValues.globalFontColor);
         feedbackupdatespanel.add(feedbackupdaterversionfield);
         feedbackupdaterversionfield.setColumns(10);
-        feedbackwillbemovedlabel.setForeground(PublicValues.globalFontColor);
         feedbackupdaterdownloadbutton = new JButton(PublicValues.language.translate("ui.updater.downloadnewest"));
         feedbackupdaterdownloadbutton.setBounds(10, 149, 230, 23);
         feedbackupdatespanel.add(feedbackupdaterdownloadbutton);
